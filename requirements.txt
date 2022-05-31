@@ -1,4 +1,4 @@
 pycaret
 streamlit
 pandas
-numpy
+numpy==1.18.4
