@@ -26,7 +26,7 @@ TSH = st.sidebar.slider(label = 'TSH', min_value = 0.0,
                           value = 10.0,
                           step = 0.1) 
 
-T4U = st.sidebar.slider(label = 'T4U', min_value = 0.0,
+TT4 = st.sidebar.slider(label = 'TT4', min_value = 0.0,
                           max_value = 1000.0 ,
                           value = 10.0,
                           step = 0.1) 
@@ -47,7 +47,7 @@ FTI = st.sidebar.slider(label = 'FTI', min_value = 0.0,
                           step = 0.1)                          
 
 
-features = {'TSH':TSH,'T3':T3,'TT4': TT4, 'T4U': T4U,
+features = {'TSH':TSH,'TT4': TT4,'T3':T3,'T4U': T4U,
             'FTI': FTI}
  
 
