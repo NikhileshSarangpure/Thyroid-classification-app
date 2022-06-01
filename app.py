@@ -10,7 +10,7 @@ def predict_thyroid(model, data):
     
     return predictions_data['Label'][0]
     
-model = load_model('random-forest_model')
+model = load_model('random_forest_model')
 
 
 st.title('Thyroid Classifier Web App')
@@ -19,24 +19,35 @@ st.write('This is a web app to classify the patient wheather he/she having Thyro
          value of each feature. After that, click on the Predict button at the bottom to\
          see the prediction of the classifier.')
 
+st.sidebar.subheader('Select the Correct Parameter')
 
-TT4 = st.sidebar.slider(label = 'TT4', min_value = 60.0,
-                          max_value = 150.0 ,
+TSH = st.sidebar.slider(label = 'TSH', min_value = 0.0,
+                          max_value = 1000.0 ,
+                          value = 10.0,
+                          step = 0.1) 
+
+T4U = st.sidebar.slider(label = 'T4U', min_value = 0.0,
+                          max_value = 1000.0 ,
+                          value = 10.0,
+                          step = 0.1) 
+
+T3 = st.sidebar.slider(label = 'T3', min_value = 0.0,
+                          max_value = 100.0 ,
                           value = 10.0,
                           step = 0.1)
 
-T4U = st.sidebar.slider(label = 'T4U', min_value = 0.00,
-                          max_value = 2.00 ,
-                          value = 1.00,
-                          step = 0.01)
+T4U = st.sidebar.slider(label = 'T4U', min_value = 0.0,
+                          max_value = 100.0 ,
+                          value = 1.0,
+                          step = 0.1)
                           
-FTI = st.sidebar.slider(label = 'FTI', min_value = 60.0,
-                          max_value = 150.0 ,
+FTI = st.sidebar.slider(label = 'FTI', min_value = 0.0,
+                          max_value = 1000.0 ,
                           value = 10.0,
                           step = 0.1)                          
 
 
-features = {'TT4': TT4, 'T4U': T4U,
+features = {'TSH':TSH,'T3':T3,'TT4': TT4, 'T4U': T4U,
             'FTI': FTI}
  
 
