@@ -46,7 +46,7 @@ st.table(features_df)
 
 if st.button('Predict'):
     
-    prediction = predict_quality(model, features_df)
+    prediction = predict_thyroid(model, features_df)
     
     st.write(' Based on feature values, patient is '+ str(prediction))
     
