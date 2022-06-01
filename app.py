@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 
 
-def predict_thyroid(model, df):
+def predict_thyroid(model, data):
     
-    predictions_data = predict_model(estimator = model, data = df)
+    predictions_data = predict_model(estimator = model, data = data)
     
     return predictions_data['Label'][0]
     
