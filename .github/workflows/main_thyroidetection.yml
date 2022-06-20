@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'thyroidetection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D0CBDC12A5834BE09F1F9A455833560E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3A9D0D59103C4F2CA80FF92AD0CFDA85 }}
